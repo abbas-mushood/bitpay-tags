@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: bitpay-tags
+            expected-sender: SP17XF1J869JJZ32YG0S3QRJAJZVY5X2B95M0EZNA
+            cost: 122500
+            path: contracts/bitpay-tags.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"
